@@ -107,9 +107,9 @@
 
         async function predict() {
             var dic_class2information = {};
-            dic_class2information['case1'] = '설명1';
-            dic_class2information['case2'] = '설명2';
-            dic_class2information['case3'] = '설명3';
+            dic_class2information['빨간 사과'] = '사과 중 색이 빨간 사과.';
+            dic_class2information['토마토'] = '빨간색의 동글동글한 토마토.';
+            dic_class2information['딸기'] = '점박이 딸기.';
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
             prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
